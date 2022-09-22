@@ -1,3 +1,4 @@
+const { log } = console
 require('esbuild')
   .build({
     entryPoints: ['./src/main.ts'],
@@ -7,10 +8,10 @@ require('esbuild')
     minify: true,
   })
   .then((result) => {
-    console.log(result)
+    log(result)
     process.exit(0)
   })
   .catch((error) => {
-    console.log(error)
+    log(error)
     process.exit(1)
   })
