@@ -10,7 +10,8 @@
     "build:watch": "esbuild src/main.ts --bundle --platform=node --watch --outfile=build/index.js",
     "run:node": "node build/index.js",
     "run:nodemon": "nodemon build/index.js",
-    "dev": "run-p compile:watch run:nodemon"
+    "dev": "run-p build:watch run:nodemon",
+    "exe": "run-s build run:node" 
   },
   "repository": {
     "type": "git",
