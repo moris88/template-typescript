@@ -7,8 +7,7 @@ require('esbuild')
     platform: 'node',
     minify: true,
   })
-  .then((result) => {
-    log(result)
+  .then(() => {
     process.exit(0)
   })
   .catch((error) => {
