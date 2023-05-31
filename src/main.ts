@@ -1,16 +1,5 @@
 import { Prospect } from './types/global'
-
-function generateRandomNumbers(count: number): number[] {
-  const randomNumbers: number[] = []
-
-  for (let i = 0; i < count; i++) {
-    const randomNumber =
-      Math.floor(Math.random() * (999999 - 100000 + 1)) + 100000
-    randomNumbers.push(randomNumber)
-  }
-
-  return randomNumbers
-}
+import { generateRandomNumbers } from './utils/lib'
 
 const MAX_NUMBER = 100
 const randomNumbers = generateRandomNumbers(MAX_NUMBER)
