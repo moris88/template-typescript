@@ -1,32 +1,37 @@
-import { Prospect } from './types/global'
-import { generateRandomNumbers } from './utils/lib'
+import hana from '@sap/hana-client'
+import dotenv from 'dotenv'
 
-const MAX_NUMBER = 100
-const randomNumbers = generateRandomNumbers(MAX_NUMBER)
+dotenv.config()
+const { HANA_HOST, HANA_PORT, HANA_USER, HANA_PASSWORD } = process.env
+console.log('HANA_HOST:', HANA_HOST)
+console.log('HANA_PORT:', HANA_PORT)
+console.log('HANA_USER:', HANA_USER)
+console.log('HANA_PASSWORD:', HANA_PASSWORD)
 
-let count = 0
- 
-const newObject = randomNumbers.map<Prospect>((number) => {
-  count++
-  return {
-    ZOHOSN: null,
-    ZBPNUM: number + '',
-    ZBCOD: 'IT',
-    ZBNAM: 'TEST PROSPECT MAURIZIO ' + count,
-    ZCUR: 'EUR',
-    ZECNUM: '123456789',
-    ZBADD: '123',
-    ZBADDL1: 'via Garibaldi 1001',
-    ZCITY: 'Milano',
-    ZCRY: 'IT',
-    ZREP1: '000',
-    ZREP2: '104',
-    ZTSCD1: 'BR',
-    ZTSCD2: '10',
-    ZTSCD3: 'A',
-    ZPOSCOD: '70000',
-    ZTEL: '3313348821',
+try {
+  const connOptions = {
+    host: HANA_HOST,
+    port: HANA_PORT,
+    uid: HANA_USER,
+    pwd: HANA_PASSWORD,
+    encrypt: 'true',
+    sslValidateCertificate: 'false',
   }
-})
 
-console.log(JSON.stringify({ prospects: newObject }))
+  const connection = hana.createConnection()
+  connection.connect(connOptions)
+
+  const query = `SHOW DATABASES;`
+  connection.exec(query, (err, result) => {
+    if (err) throw err
+    console.log('Result SQL:', result)
+  })
+  connection.disconnect(function (err) {
+    if (err) throw err
+    console.log('Disconnected')
+  })
+  process.exit(0)
+} catch (error) {
+  console.log('ERROR!!!', error)
+  process.exit(1)
+}
