@@ -4,6 +4,11 @@ Template per utilizzare rapidamente un progetto con node e typescript ed essere 
 
 ## Comandi
 
+### PNPM
+
+- ```pnpm dev```: comando di avvio
+- ```pnpm build```: comando di build
+
 ### YARN
 
 - ```yarn dev```: comando di avvio
