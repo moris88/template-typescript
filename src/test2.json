@@ -1,0 +1,127 @@
+{
+    "accounts": [{
+        "associated_module": null,
+        "webhook": true,
+        "operation_type": {
+            "web_update": true,
+            "api_create": true,
+            "web_create": true,
+            "api_update": true
+        },
+        "colour_code_enabled_by_system": false,
+        "field_label": "Partita iva aziendale",
+        "tooltip": null,
+        "type": "used",
+        "field_read_only": false,
+        "customizable_properties": [
+            "mandatory",
+            "fieldlabel",
+            "max_length_digits",
+            "unique",
+            "encrypted",
+            "removal",
+            "deletion",
+            "private_field",
+            "tooltip",
+            "hipaa_field",
+            "add_to_other_layouts",
+            "external_field"
+        ],
+        "display_label": "Partita iva aziendale",
+        "read_only": false,
+        "association_details": null,
+        "businesscard_supported": true,
+        "multi_module_lookup": {},
+        "id": "151405000000141023",
+        "created_time": null,
+        "filterable": true,
+        "visible": true,
+        "profiles": [
+            {
+                "permission_type": "read_write",
+                "name": "Administrator",
+                "id": "151405000000026972"
+            },
+            {
+                "permission_type": "read_write",
+                "name": "Standard",
+                "id": "151405000000026974"
+            },
+            {
+                "permission_type": "read_write",
+                "name": "Consulenti Commerciali",
+                "id": "151405000000205075"
+            },
+            {
+                "permission_type": "read_write",
+                "name": "Tecnici area gestione",
+                "id": "151405000000216270"
+            },
+            {
+                "permission_type": "read_write",
+                "name": "Commerciale interno",
+                "id": "151405000007216537"
+            },
+            {
+                "permission_type": "read_write",
+                "name": "Tecnico esterno",
+                "id": "151405000011065142"
+            }
+        ],
+        "view_type": {
+            "view": true,
+            "edit": true,
+            "quick_create": false,
+            "create": true
+        },
+        "separator": false,
+        "searchable": true,
+        "external": null,
+        "api_name": "Partita_iva_aziendale",
+        "unique": {
+            "case_sensitive": false
+        },
+        "enable_colour_code": false,
+        "pick_list_values": [],
+        "system_mandatory": false,
+        "virtual_field": false,
+        "json_type": "string",
+        "crypt": null,
+        "created_source": "default",
+        "display_type": -1,
+        "ui_type": 1,
+        "modified_time": null,
+        "email_parser": {
+            "fields_update_supported": true,
+            "record_operations_supported": true
+        },
+        "currency": {},
+        "custom_field": true,
+        "lookup": {},
+        "rollup_summary": {},
+        "length": 255,
+        "display_field": false,
+        "pick_list_values_sorted_lexically": false,
+        "sortable": true,
+        "layout_associations": [
+            {
+                "api_name": "Standard__s",
+                "name": "Standard",
+                "id": "151405000000032035"
+            },
+            {
+                "api_name": "Crea_Modifica",
+                "name": "Crea / Modifica",
+                "id": "151405000000277426"
+            }
+        ],
+        "global_picklist": null,
+        "history_tracking": null,
+        "data_type": "text",
+        "formula": {},
+        "decimal_place": null,
+        "mass_update": false,
+        "multiselectlookup": {},
+        "auto_number": {}
+    }]
+}
