@@ -1,0 +1,23 @@
+{
+    "verbose": true,
+    "ignore": [
+        "node_modules/**",
+        "dist/**",
+        "src/**/*.test.ts",
+        "src/**/*.spec.ts"
+    ],
+    "watch": [
+        "src/**/*.ts"
+    ],
+    "ext": "ts",
+    "exec": "ts-node src/main.ts",
+    "execMap": {
+        "ts": "ts-node"
+    },
+    "delay": "2500",
+    "events": {
+        "restart": "echo 'Restarting server...'",
+        "crash": "echo 'Server crashed!'",
+        "exit": "echo 'Server stopped!'"
+    }
+}
