@@ -3,7 +3,7 @@ require('esbuild')
   .build({
     entryPoints: ['./src/main.ts'],
     bundle: true,
-    outfile: './build/index.js',
+    outfile: './dist/index.js',
     platform: 'node',
     minify: true,
   })

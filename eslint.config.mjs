@@ -9,7 +9,7 @@ export default [
   { files: ["**/*.{js,mjs,cjs,ts}"] },
   { languageOptions: { globals: globals.browser } },
   {
-    ignores: [".esbuild.config.js"],
+    ignores: ["esbuild.config.js", "dist/**", "node_modules/**"],
   },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
